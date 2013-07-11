@@ -1,14 +1,16 @@
 <?php
-require_once('/usr/share/php/Smarty/Smarty.class.php');
+//require_once('/usr/share/php/Smarty/Smarty.class.php');
 
 define('THEME', 'respond');
 
 define('ROOT', dirname(__FILE__).'/');
+define('LIB_DIR', ROOT . 'lib/');
 define('TPL_DIR', ROOT . 'tpl/');
 define('DB_DIR', ROOT . 'db/');
 define('DAO_DIR', ROOT . 'dao/');
 define('THEME_DIR', '../theme/' . THEME);
 
+require_once(LIB_DIR . 'Smarty/Smarty.class.php');
 require_once(DAO_DIR . 'base.php');
 
 class MySmarty extends Smarty
